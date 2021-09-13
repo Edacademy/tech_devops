@@ -1,0 +1,30 @@
+version: "3.7"
+
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    restart: always
+    container_name: prometheus
+    volumes:
+      - ~/devops/prometheus_conf/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ~/devops/prometheus_data:/prometheus/
+    networks:
+      - devops_web_network
+
+  grafana:
+    image: grafana/grafana:latest
+    restart: always
+    container_name: grafana
+    ports: 
+      - '3000:3000'
+    volumes:
+      - ~/devops/grafana_data:/var/lib/grafana
+      - ~/devops/grafana/provisioning:/etc/grafana/provisioning/
+    depends_on:
+      - prometheus
+    networks:
+      - devops_web_network
+
+networks:
+  devops_web_network:
+    external: true
