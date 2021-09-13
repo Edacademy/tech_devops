@@ -34,6 +34,6 @@ https://www.adminer.org/
 
 https://cloudbeaver.io/
 
-<b>prometheus</b>: application web légère et moderne pour la gestion des bases de données
+<b>Prometheus</b>: est une solution de monitoring pour l'enregistrement et le traitement de toute série temporelle purement numérique. Il rassemble, organise et stocke des métriques ainsi que des identifiants uniques et des horodatages.
 
-https://cloudbeaver.io/
+https://prometheus.io/
