@@ -23,3 +23,8 @@ sudo nano /etc/hosts
 ```bash
 docker-compose -f "jenkins.yml" up -d --build
 ```
+
+### Execution du service
+```bash
+8080
+```
