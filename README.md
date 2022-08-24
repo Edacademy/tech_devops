@@ -37,3 +37,7 @@ https://cloudbeaver.io/
 <b>Prometheus</b>: est une solution de monitoring pour l'enregistrement et le traitement de toute série temporelle purement numérique. Il rassemble, organise et stocke des métriques ainsi que des identifiants uniques et des horodatages.
 
 https://prometheus.io/
+
+<b>databack/mysql-backup</b>: outil qui permer d'effectuer le dumps de la base de données mysql
+
+https://hub.docker.com/r/databack/mysql-backup
