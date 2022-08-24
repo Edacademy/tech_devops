@@ -1,0 +1,23 @@
+version: '2.1'
+services:
+  backup:
+    image: databack/mysql-backup
+    restart: always
+    volumes:
+      - ~/devops/databack/db:/db
+      - ~/devops/databack/pre-backup/scripts:/scripts.d/pre-backup
+      - ~/devops/databack/post-backup/scripts:/scripts.d/post-backup
+    environment:
+      - DB_DUMP_TARGET=/db
+      - DB_USER=root
+      - DB_PASS=devops2021
+      - DB_NAMES=gestioncoli
+      - DB_DUMP_FREQ=5
+      - DB_DUMP_BEGIN=2330
+      - DB_SERVER=mysql
+    networks:
+      - devops_web_network
+
+networks:
+  devops_web_network:
+    external: true
